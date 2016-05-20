@@ -1,7 +1,9 @@
 require 'pry'
 require 'httparty'
 
-response = HTTParty.get('http://hypem.com/playlist/popular/noremix/json/1/data.js')
+HYPEM_POPULAR_SONGS = "http://hypem.com/playlist/popular/noremix/json/1/data.js"
+
+response = HTTParty.get(HYPEM_POPULAR_SONGS)
 
 json_response = JSON.parse(response.body)
 
